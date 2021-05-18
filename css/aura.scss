@@ -1,0 +1,78 @@
+// Scss Document
+
+$c: cyan;
+$m: magenta;
+$y: yellow;
+$k: black;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $k;
+}
+
+ul {
+  width: 50vw;
+  height: 50vw;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle at top left, lighten($k, 10%), $k);
+    border-radius: 50%;
+  }
+  li {
+    border-radius: 50%;
+    background-color: $y;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: aura 30s infinite linear;
+    mix-blend-mode: screen;
+    filter: blur(1vw);
+    &:nth-child(2) {
+      background-color: $m;
+      animation-delay: -10s;
+    }
+    &:nth-child(3) {
+      background-color: $c;
+      animation-direction: reverse;
+      animation-delay: -20s;
+    }
+  }
+}
+
+@keyframes aura {
+  25%,
+  75% {
+    border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
+  }
+  50% {
+    border-radius: 40% 60% 60% 40% / 40% 60% 40% 60%;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
