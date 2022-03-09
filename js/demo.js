@@ -3,9 +3,9 @@ $(document).on("click", "#btn01", function () {
   });
 
   $(document).on("click", "#btn02", function () {
-    window.location.href = "https://www.youtube.com/watch?v=75Tnm-7k8xM";
+    window.location.href = "hd/index.html";
   });
 
   $(document).on("click", "#btn03", function () {
-    window.location.href = "https://www.youtube.com/watch?v=tPxr9q7vtas";
+    window.location.href = "sd/index.html";
   });
