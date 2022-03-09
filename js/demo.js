@@ -11,5 +11,5 @@ $(document).on("click", "#btn01", function () {
   });
 
   $(document).on("click", "#btn04", function () {
-    window.location.href = "./deck/MoodBox_Kickstarter.pdf";
+    window.location.href = "deck/index.html";
   });
